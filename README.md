@@ -1,4 +1,4 @@
-# [Javascript Journey] &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)][![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]
+# Javascript Journey &middot; [GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)[PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
 This is my very first javascript repository.
 It is only for study purposes.
@@ -13,11 +13,7 @@ My goal is to understand how the following technologies works:
 
 The sources that I am been using will be listed here :)
 
-* Use [Online Playgrounds](https://reactjs.org/docs/getting-started.html#online-playgrounds) to get a taste of React.
-* [Add React to a Website](https://reactjs.org/docs/add-react-to-a-website.html) as a `<script>` tag in one minute.
-* [Create a New React App](https://reactjs.org/docs/create-a-new-react-app.html) if you're looking for a powerful JavaScript toolchain.
-
-You can use React as a `<script>` tag from a [CDN](https://reactjs.org/docs/cdn-links.html), or as a `react` package on [npm](https://www.npmjs.com/).
+* The javascript [STARTER PACK](https://skylab.rocketseat.com.br/journey/starter) by [RocketSeat](https://rocketseat.com.br/). 
 
 <!-- 
 
