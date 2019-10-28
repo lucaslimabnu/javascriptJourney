@@ -1,4 +1,4 @@
-# Javascript Journey &middot; [GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)[PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+# Javascript Journey &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
 This is my very first javascript repository.
 It is only for study purposes.
