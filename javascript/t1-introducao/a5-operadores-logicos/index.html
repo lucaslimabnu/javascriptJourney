@@ -4,18 +4,35 @@
     </head>
     <body>
         <script>
-            var sexo = "M";
+            // AND, OR, NOT
 
-            // if (sexo === "M") {
-            //     return "Masculino";
-            // } else {
-            //     return "Feminino";
-            // }
+            var sexo = "M", idade = 20;
+
+            if (sexo === "M" && idade >= 18){} // true, pois satisfaz ambas as condições
+
+            idade = 14;
+
+            if (sexo === "M" || idade >= 18){} // true, pois satisfaz uma das condições
             
-            var retorno = sexo === "M" ? "Masculino" : "Feminino";
+            sexo = "F";
+            
+            if (sexo === "M" || idade >= 18){} // false, pois não satisfaz nenhuma
+            
+            if (sexo !== "M"){} // true, pois é diferente de "M"
 
-            console.log(retorno); // Output: "Masculino"
+            // armazenando valor de boolean na variável
 
+            // Startando a variável
+            var masculino;
+
+            if(sexo === "M"){
+                masculino = true;
+            }else{
+                masculino = false;
+            }
+
+            masculino = sexo === "M"; // masculino = false, pois sexo é "F" (diferente de "M")
+            
         </script>
     </body>
 </html>
