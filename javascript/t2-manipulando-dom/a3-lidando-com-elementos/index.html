@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" id="nome">
+        </div>
+        <script>
+            
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href', 'https://github.com/lucaslimabnu/javascriptJourney/');
+            linkElement.setAttribute('title', 'Github sobre Javascript');
+
+            var textElement = document.createTextNode('Acessar github de Lucas Lima');
+
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('div#app');
+            containerElement.appendChild(linkElement);
+            
+            var inputElement = document.querySelector('div#app input#nome');
+            containerElement.removeChild(inputElement);
+
+        </script>
+    </body>
+</html>
