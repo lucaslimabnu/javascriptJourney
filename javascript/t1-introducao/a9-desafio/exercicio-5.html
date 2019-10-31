@@ -1,0 +1,31 @@
+<html>
+
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    
+    <body>
+        <script> 
+            var usuarios = [
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
+            function apresenta(lista_objetos){
+                for (let index = 0; index < lista_objetos.length; index++) {
+                    
+                    console.log(`O ${lista_objetos[index].nome} possui as habilidades: ${lista_objetos[index].habilidades.join(', ')}`  );
+                    
+                }
+            }
+
+            apresenta(usuarios);
+        </script>
+    </body>
+    
+    </html>

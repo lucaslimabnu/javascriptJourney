@@ -1,0 +1,30 @@
+
+<html>
+
+<head>
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <script> 
+
+        function temHabilidade(skills) {
+            var tem = false;
+
+            for (let index = 0; index < skills.length; index++) {
+                if(skills[index] == 'Javascript'){
+                    tem = true
+                }
+            }
+
+            console.log(tem ? "O vetor possui 'Javascript'" : "O vetor possui 'Javascript'");
+            
+        }
+        var skills = ["Javascript", "ReactJS", "React Native"];
+
+        temHabilidade(skills); // true ou false
+
+    </script>
+</body>
+
+</html>

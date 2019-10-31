@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <script> 
+    function to_string(object){
+        // deve receber um objeto que contenha os seguintes campos:
+            // rua, numero, bairro, cidade e uf.
+        console.log(`O usuário mora em ${object.cidade} / ${object.uf}, no bairro ${object.bairro}, na rua "${object.rua}" com nº ${object.numero}.`);
+    }
+    var endereco = {
+        rua: "Rua dos pinheiros",
+        numero: 1293,
+        bairro: "Centro",
+        cidade: "São Paulo",
+        uf: "SP"
+    };
+    to_string(endereco);
+    </script>
+</body>
+
+</html>
