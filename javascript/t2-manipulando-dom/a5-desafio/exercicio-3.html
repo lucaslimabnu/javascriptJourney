@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+        </div>
+    <script>
+
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        appElement = document.getElementById('app');
+        ulElement = document.createElement('ul');
+        for (let index = 0; index < nomes.length; index++) {
+            var liElement = document.createElement('li');
+            var liElementText = document.createTextNode(nomes[index]);
+            liElement.appendChild(liElementText);
+            ulElement.appendChild(liElement);
+            
+        }
+        appElement.appendChild(ulElement);
+
+    </script>
+</body>
+</html>

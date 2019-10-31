@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <button>Criar novo quadrado</button>
+        </div>
+    <script>
+        
+        var app = document.querySelector('div#app');
+        var btnElement = document.querySelector('button');
+        btnElement.onclick = function(){
+
+            var quadrado = document.createElement('div');
+            quadrado.setAttribute('class','box');
+            quadrado.style.width = 100;
+            quadrado.style.height = 100;
+            quadrado.style.backgroundColor = '#f00';
+            app.appendChild(quadrado);
+
+        }
+
+    </script>
+</body>
+</html>
