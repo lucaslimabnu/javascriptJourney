@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome" id="nome" class="nome" />
+            <input type="text" name="idade"/>
+            <button class="botao">Adicionar</button>
+        </div>
+        <script>
+
+            // document referencia a árvore de elementos do HTML
+
+            // getElementById retorna um único elemento.
+            var inputElement = document.getElementById('nome');
+            console.log(inputElement);
+            
+            // getElementsByTagName retorna um vetor de elementos
+            inputElement = document.getElementsByTagName('input');
+            console.log(inputElement);
+            
+            // getElementsByClassName retorna um vetor de elementos 
+            inputElement = document.getElementsByClassName('nome');
+            console.log(inputElement);
+
+            // querySelector navega pela árvore de elementos
+            inputElement = document.querySelector('div#app input[name=idade]');
+            console.log(inputElement);
+
+            // seleciona o elemento de botão com classe botao
+            var btnElement = document.querySelector('button.botao');
+
+            // adiciona um listner para cliques
+            // mostra o valor do campo de idade
+            btnElement.onclick = function() {
+                var text = inputElement.value;
+                alert(text);
+            }
+
+        </script>
+    </body>
+</html>
