@@ -10,15 +10,15 @@ var populaUl = function (repos) {
         for (rep of repos) {
             liElement = document.createElement('li');
             liTextElement = document.createTextNode(rep.full_name);
-
+            
             liElement.appendChild(liTextElement);
             ulElement.appendChild(liElement);
         }
-
+        
     } else {
         liElement = document.createElement('li');
         liTextElement = document.createTextNode('Este usuário não possui repositórios.');
-
+        
         liElement.appendChild(liTextElement);
         ulElement.appendChild(liElement);
     }
@@ -28,15 +28,19 @@ var populaUl = function (repos) {
 var mostraErro = function (err) {
     liElement = document.createElement('li');
     liTextElement = document.createTextNode('Usuário não encontrado');
-
+    
     liElement.appendChild(liTextElement);
     ulElement.appendChild(liElement);
 }
 
-
-
 btnElement.onclick = function () {
     var username = inputElement.value;
+    ulElement.innerHTML = '';
+    var liElement, liTextElement;
+    liElement = document.createElement('li');
+    liTextElement = document.createTextNode('Carregando...');
+    liElement.appendChild(liTextElement);
+    ulElement.appendChild(liElement);
     axios.get('https://api.github.com/users/' + username + '/repos')
         .then(function (response) {
             console.log(response);
