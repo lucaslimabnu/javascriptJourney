@@ -1,9 +1,26 @@
-class Matematica {
-    // Static não tem conhecimento do restante da classe.
-    // Somente do seu escopo.
-    static soma(a,b) {
-        return a + b;
+// // constantes não podem ser reatribuidas
+// const a = 1;
+
+// a = 3;
+
+// // mas podem ter seus dados mutados (sem alterar a estrutura)
+// const usuario = {
+//     nome : "Lucas"
+// };
+
+// usuario.nome = "Lima";
+
+// console.log(usuario);
+
+function teste (x) {
+    let y = 2;
+
+    if(x > 5){
+        let y = 4
+        console.log(x, y); // 10 4
     }
+    console.log(x, y); // 10 2
 }
 
-console.log(Matematica.soma(1,2));
+// console.log(y); tem o escopo diferente, então dá erro
+teste(10);

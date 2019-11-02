@@ -1,28 +1,24 @@
 "use strict";
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+// // constantes não podem ser reatribuidas
+// const a = 1;
+// a = 3;
+// // mas podem ter seus dados mutados (sem alterar a estrutura)
+// const usuario = {
+//     nome : "Lucas"
+// };
+// usuario.nome = "Lima";
+// console.log(usuario);
+function teste(x) {
+  var y = 2;
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-var Matematica =
-/*#__PURE__*/
-function () {
-  function Matematica() {
-    _classCallCheck(this, Matematica);
+  if (x > 5) {
+    var _y = 4;
+    console.log(x, _y); // 10 4
   }
 
-  _createClass(Matematica, null, [{
-    key: "soma",
-    // Static não tem conhecimento do restante da classe.
-    // Somente do seu escopo.
-    value: function soma(a, b) {
-      return a + b;
-    }
-  }]);
+  console.log(x, y); // 10 2
+} // console.log(y); tem o escopo diferente, então dá erro
 
-  return Matematica;
-}();
 
-console.log(Matematica.soma(1, 2));
+teste(10);
