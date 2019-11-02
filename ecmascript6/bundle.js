@@ -1,25 +1,30 @@
 "use strict";
 
-var arr = [1, 3, 4, 5, 8, 10]; // o map percorre todo o vetor e executa a ação dentro de seu parâmetro
-// pode retornar o value e a key
+var arr = [1, 3, 4, 5, 8, 10]; // a função passada como parâmetro pode ser classificada como anônima
+// const newArr = arr.map(function(item, index) {});
+// quando a arrow function recebe somente um parametro, 
+// pode-se remover os parênteses
+// quando simplesmente retorna uma informação, pode-se somente colocar o resultado
+// const newArr = arr.map( item => {
+//     return item * 2;
+// });
 
-var newArr = arr.map(function (item, index) {
-  return item + index;
+var newArr = arr.map(function (item) {
+  return item * 2;
 });
-console.log(newArr); // reduz todo o array para um único número
+console.log(newArr); // não é recomendado
 
-var sum = arr.reduce(function (total, next) {
-  return total + next;
-});
-console.log(sum); // aplica uma regra para o vetor percorrido
+var teste = function teste() {
+  return 'teste';
+};
 
-var filter = arr.filter(function (item) {
-  // sempre retorna um true ou false
-  return item % 2 === 0;
-});
-console.log(filter); // busca um item que satisfaça a função e retorna ele
+console.log(teste()); // para retornar um objeto, usa-se parenteses ao seu redor.
+// pois as chaves do objeto podem ser identificadas como as do corpo da arrow function
 
-var find = arr.find(function (item, index) {
-  return item === 4;
-});
-console.log(10);
+var teste2 = function teste2() {
+  return {
+    nome: "Lucas"
+  };
+};
+
+console.log(teste2());
