@@ -1,26 +1,32 @@
-// // constantes não podem ser reatribuidas
-// const a = 1;
+const arr = [1, 3, 4, 5, 8, 10];
 
-// a = 3;
+// o map percorre todo o vetor e executa a ação dentro de seu parâmetro
+// pode retornar o value e a key
+const newArr = arr.map(function(item, index) {
+    return item + index;
+});
 
-// // mas podem ter seus dados mutados (sem alterar a estrutura)
-// const usuario = {
-//     nome : "Lucas"
-// };
+console.log(newArr);
 
-// usuario.nome = "Lima";
+// reduz todo o array para um único número
+const sum = arr.reduce(function(total, next){
+    return total + next;
+});
 
-// console.log(usuario);
+console.log(sum);
 
-function teste (x) {
-    let y = 2;
+// aplica uma regra para o vetor percorrido
+const filter = arr.filter(function(item){
+    // sempre retorna um true ou false
+    return item % 2 === 0;
+});
 
-    if(x > 5){
-        let y = 4
-        console.log(x, y); // 10 4
-    }
-    console.log(x, y); // 10 2
-}
+console.log(filter);
 
-// console.log(y); tem o escopo diferente, então dá erro
-teste(10);
+// busca um item que satisfaça a função e retorna ele
+const find = arr.find(function(item, index){
+    return item === 4;
+});
+
+
+console.log(10);
