@@ -1,30 +1,21 @@
 "use strict";
 
-var arr = [1, 3, 4, 5, 8, 10]; // a função passada como parâmetro pode ser classificada como anônima
-// const newArr = arr.map(function(item, index) {});
-// quando a arrow function recebe somente um parametro, 
-// pode-se remover os parênteses
-// quando simplesmente retorna uma informação, pode-se somente colocar o resultado
-// const newArr = arr.map( item => {
-//     return item * 2;
-// });
+function soma() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
+  return a + b;
+}
 
-var newArr = arr.map(function (item) {
-  return item * 2;
-});
-console.log(newArr); // não é recomendado
+console.log(soma(1)); // retorna um Not a Number
 
-var teste = function teste() {
-  return 'teste';
+console.log(soma()); // retorna um Not a Number
+
+var novaSoma = function novaSoma() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
+  return a + b;
 };
 
-console.log(teste()); // para retornar um objeto, usa-se parenteses ao seu redor.
-// pois as chaves do objeto podem ser identificadas como as do corpo da arrow function
+console.log(novaSoma(1)); // retorna um Not a Number
 
-var teste2 = function teste2() {
-  return {
-    nome: "Lucas"
-  };
-};
-
-console.log(teste2());
+console.log(novaSoma()); // retorna um Not a Number
