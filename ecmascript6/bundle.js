@@ -1,6 +1,15 @@
 "use strict";
 
 var nome = "Lucas";
-var idade = 20; // console.log("Meu nome é " + nome + " e tenho " + idade + " anos.");
+var idade = 20; // const usuario = {
+//     nome: nome,
+//     idade: idade,
+//     empresa: 'SoftDevLucas',
+// };
 
-console.log("Meu nome \xE9 ".concat(nome, " e tenho ").concat(idade, " anos."));
+var usuario = {
+  nome: nome,
+  idade: idade,
+  empresa: 'SoftDevLucas'
+};
+console.log(usuario);

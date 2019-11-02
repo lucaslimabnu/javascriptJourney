@@ -1,5 +1,15 @@
 const nome = "Lucas";
 const idade = 20;
 
-// console.log("Meu nome é " + nome + " e tenho " + idade + " anos.");
-console.log(`Meu nome é ${nome} e tenho ${idade} anos.`)
+// const usuario = {
+//     nome: nome,
+//     idade: idade,
+//     empresa: 'SoftDevLucas',
+// };
+const usuario = {
+    nome,
+    idade,
+    empresa: 'SoftDevLucas',
+};
+
+console.log(usuario);
