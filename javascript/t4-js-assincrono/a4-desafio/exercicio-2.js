@@ -1,11 +1,14 @@
 var btnElement = document.querySelector('button');
 var inputElement = document.querySelector('input');
 var ulElement = document.getElementById("repos");
+var username;
 
 var populaUl = function (repos) {
     var liElement, liTextElement;
     ulElement.innerHTML = '';
     console.log(repos);
+    var titleElement = document.querySelector('title');
+    titleElement.innerHTML = `Repositórios de ${username}`;
     if (repos.length > 0) {
         for (rep of repos) {
             liElement = document.createElement('li');
@@ -34,7 +37,7 @@ var mostraErro = function (err) {
 }
 
 btnElement.onclick = function () {
-    var username = inputElement.value;
+    username = inputElement.value;
     ulElement.innerHTML = '';
     var liElement, liTextElement;
     liElement = document.createElement('li');
