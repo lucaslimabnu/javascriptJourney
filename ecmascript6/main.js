@@ -1,11 +1,28 @@
-function soma (a = 3, b = 6){
-    return a + b;
+const usuario = {
+    nome: 'Lucas',
+    idade : 20,
+    endereco : {
+        cidade: 'Blumenau',
+        estado: 'SC',
+    },
+};
+
+console.log(usuario);
+
+// const nome = usuario.nome;
+// const idade = usuario.idade;
+// const cidade = usuario.endereco.cidade;
+
+//agora, utilizando desestruturação
+const { nome, idade, endereco : {cidade}} = usuario;
+
+console.log(nome);
+console.log(idade);
+console.log(cidade);
+
+
+function mostraNome( { nome, idade } ){
+    console.log(nome, idade);
 }
 
-console.log(soma(1)); // retorna um Not a Number
-console.log(soma()); // retorna um Not a Number
-
-const novaSoma = (a = 3, b = 6) => a + b;
-
-console.log(novaSoma(1)); // retorna um Not a Number
-console.log(novaSoma()); // retorna um Not a Number
+mostraNome(usuario);
