@@ -81,32 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/main.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./main.js":
-/*!*****************!*\
-  !*** ./main.js ***!
-  \*****************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/main.js":
+/*!*********************!*\
+  !*** ./src/main.js ***!
+  \*********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _soma__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./soma */ \"./soma.js\");\n// import { soma as somaFunction, sub } from './funcoes'; para renomear imports\n// console.log(somaFunction(1,2));\n// console.log(sub(1,2));\n\nconsole.log(Object(_soma__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(1, 2)); // import soma, { sub } from './funcoes'; QUANDO USAR UM DEFAULT E VÁRIOS OUTROS EXPORT\n\n//# sourceURL=webpack:///./main.js?");
-
-/***/ }),
-
-/***/ "./soma.js":
-/*!*****************!*\
-  !*** ./soma.js ***!
-  \*****************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return soma; });\nfunction soma(a, b) {\n  return a + b;\n}\n\n//# sourceURL=webpack:///./soma.js?");
+eval("alert('opa');\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ })
 
