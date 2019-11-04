@@ -1,43 +1,26 @@
-import axios from 'axios';
+class App {
+  constructor() {
+    this.repositories = [];
 
-class Api {
-    static async getUserInfo(username){
-        try{
-            const response = await axios.get(`https://api.github.com/users/${username}`);
-            console.log(response);
-        } catch (err){
-            console.warn('Erro na api');
-        }
-    }
-}
+    this.formEl = document.getElementById('repo-form');
 
-Api.getUserInfo('lucaslimabnu');
-Api.getUserInfo('"');
+    this.registerHandlers();
+  }
 
-// Funão delay aciona o .then após 1s
-const delay = () => new Promise(resolve => setTimeout(resolve, 1000));
-function umPorSegundo() {
-    delay().then(() => {
-        console.log('1s');
-        delay().then(() => {
-            console.log('2s');
-            delay().then(() => {
-                console.log('3s');
-            });
-        })
+  registerHandlers() {
+    this.formEl.onsubmit = event => this.addRepository(event); 
+  }
+
+  addRepository(event) {
+    event.preventDefault();
+    this.repositories.push({
+      name: 'Rocketseat',
+      description: 'Tire a sua ideia do papel e dê vida à sua startup.',
+      avatar_url: 'https://avatars0.githubusercontent.com/u/28929274?v=4',
+      html_url: 'http://github.com/rocketseat/rocketseat.com.br',
     });
+    console.log(this.repositories);
+  }
 }
-umPorSegundo();
 
-const doisPorSegundo = async  () => {
-    await delay();
-    console.log("1s d");
-    console.log("1s d");
-    await delay();
-    console.log("2s d");
-    console.log("2s d");
-    await delay();
-    console.log("3s d");
-    console.log("3s d");
-}
-doisPorSegundo();
+new App();
