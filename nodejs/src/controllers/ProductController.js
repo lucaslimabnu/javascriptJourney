@@ -4,8 +4,14 @@ const Product = mongoose.model('Product');
 
 module.exports = {
   async index(req, res) {
+    // desestruturação de objeto com valor padrão
+    const { page = 1 } = req.query;
+
     // o where pode ir aqui no find
-    const products = await Product.find(); 
+    // const products = await Product.find(); 
+    // e para paginação, utilizar paginate
+    // primeiro objeto é o filtro e o segundo info sobre pag.
+    const products = await Product.paginate({}, { page, limit:10 }); 
 
     return res.json(products);
   },
