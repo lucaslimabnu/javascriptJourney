@@ -31,7 +31,7 @@ module.exports = {
     
   },
   async destroy(req, res) {
-    const product = await Product.findByIdAndRemove(req.params.id);
+    await Product.findByIdAndRemove(req.params.id);
 
     // retorna sucesso sem conteúdo
     return res.send();
